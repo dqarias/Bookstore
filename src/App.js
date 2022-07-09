@@ -4,6 +4,7 @@ import Books from './components/Books';
 import NavBar from './components/Navbar';
 import Categories from './components/Categories';
 import NoMatch from './screens/NoMatch';
+import 'App.css';
 
 function App() {
   return (
