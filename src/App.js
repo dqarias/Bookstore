@@ -6,7 +6,7 @@ import NavBar from './components/Navbar';
 import Categories from './components/Categories';
 import NoMatch from './screens/NoMatch';
 import store from './redux/configureStore';
-import 'App.css';
+import './App.css';
 
 function App() {
   return (
