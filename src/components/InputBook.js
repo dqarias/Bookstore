@@ -29,13 +29,15 @@ const InputBook = () => {
       author: bookArray.author,
     };
     dispatchBook(addBook(newBook));
+    bookArray.title = '';
+    bookArray.author = '';
   };
 
   return (
     <form>
       <input
         type="text"
-        placeholder="Book tit le"
+        placeholder="Book title"
         value={bookArray.title}
         name="title"
         onChange={(e) => handleInputChange(e)}
