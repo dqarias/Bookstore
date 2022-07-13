@@ -10,7 +10,6 @@ const Books = () => {
     <div>
       <BookList books={bookState} />
       <br />
-      {console.log(bookState)}
       <br />
       <InputBook />
     </div>
