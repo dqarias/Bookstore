@@ -2,7 +2,7 @@
 import React from 'react';
 import Book from './Book';
 
-const BookList = ({ books, handleDeleteBookProps }) => (
+const BookList = ({ books }) => (
   <div>
     {books.map((book) => (
       <Book
@@ -11,7 +11,6 @@ const BookList = ({ books, handleDeleteBookProps }) => (
         title={book.title}
         author={book.author}
         genre={book.genre}
-        handleDeleteBookProps={handleDeleteBookProps}
       />
     ))}
   </div>
