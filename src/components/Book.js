@@ -1,5 +1,5 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
+import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
@@ -22,3 +22,17 @@ const Book = ({
   );
 };
 export default Book;
+
+Book.propTypes = {
+  title: PropTypes.string,
+  author: PropTypes.string,
+  genre: PropTypes.string,
+  id: PropTypes.string,
+};
+
+Book.defaultProps = {
+  title: undefined,
+  author: undefined,
+  genre: undefined,
+  id: undefined,
+};
