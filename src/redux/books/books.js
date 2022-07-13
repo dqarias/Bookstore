@@ -2,7 +2,7 @@
 
 const initialState = [
   {
-    id: 1,
+    id: 'bd6e1af5-692f-49a5-b609-cd2baa74acbc',
     title: 'The power of self discipline',
     author: 'Peter Hollins',
     genre: 'Self-Help',
