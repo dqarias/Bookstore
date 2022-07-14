@@ -10,7 +10,7 @@ const BookList = ({ books }) => (
         id={book.id}
         title={book.title}
         author={book.author}
-        genre={book.genre}
+        category={book.category}
       />
     ))}
   </div>

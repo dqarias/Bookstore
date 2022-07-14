@@ -8,6 +8,7 @@ const InputBook = () => {
     id: '',
     title: '',
     author: '',
+    category: '',
   });
 
   const dispatchBook = useDispatch();
@@ -27,10 +28,12 @@ const InputBook = () => {
       id: uuidv4(),
       title: bookArray.title,
       author: bookArray.author,
+      category: bookArray.category,
     };
     dispatchBook(addBook(newBook));
     bookArray.title = '';
     bookArray.author = '';
+    bookArray.category = '';
   };
 
   return (
@@ -47,6 +50,13 @@ const InputBook = () => {
         placeholder="Book author"
         value={bookArray.author}
         name="author"
+        onChange={(e) => handleInputChange(e)}
+      />
+      <input
+        type="text"
+        placeholder="Book category"
+        value={bookArray.category}
+        name="category"
         onChange={(e) => handleInputChange(e)}
       />
       <button onClick={handleSubmit} type="button">ADD BOOK</button>

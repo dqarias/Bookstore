@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = ({
-  title, author, genre, id,
+  title, author, category, id,
 }) => {
   const dispatchDelete = useDispatch();
 
@@ -14,7 +14,7 @@ const Book = ({
 
   return (
     <div>
-      <p>{genre}</p>
+      <p>{category}</p>
       <p>{title}</p>
       <p>{author}</p>
       <button onClick={() => handleDeleteBook(id)} type="button">Remove</button>
@@ -26,13 +26,13 @@ export default Book;
 Book.propTypes = {
   title: PropTypes.string,
   author: PropTypes.string,
-  genre: PropTypes.string,
+  category: PropTypes.string,
   id: PropTypes.string,
 };
 
 Book.defaultProps = {
   title: undefined,
   author: undefined,
-  genre: undefined,
+  category: undefined,
   id: undefined,
 };
