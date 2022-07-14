@@ -2,32 +2,7 @@
 
 import fetchData from '../../services/booksService';
 
-const initialState = [
-  {
-    id: 'bd6e1af5-692f-49a5-b609-cd2baa74acbc',
-    title: 'The power of self discipline',
-    author: 'Peter Hollins',
-    genre: 'Self-Help',
-  },
-  {
-    id: '2',
-    title: 'Get out your own way',
-    author: 'Mark Goulston',
-    genre: 'Self-Help',
-  },
-  {
-    id: '3',
-    title: 'Life of Pi',
-    author: 'Yann Martel',
-    genre: 'Adventure',
-  },
-  {
-    id: '4',
-    title: 'Bob the cat',
-    author: 'Yann Martel',
-    genre: 'Adventure',
-  },
-];
+const initialState = [];
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
@@ -37,6 +12,9 @@ const FETCH_BOOK = 'bookstore/books/FETCH_BOOK';
 // Reducer
 export const booksReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_BOOK: {
+      return action.payload;
+    }
     case ADD_BOOK: {
       return [
         ...state,

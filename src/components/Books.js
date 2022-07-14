@@ -12,6 +12,8 @@ const Books = () => {
     dispatch(fetchBooks());
   }, []);
 
+  console.log('bookstate', bookState);
+
   return (
     <div>
       <BookList books={bookState} />
