@@ -1,5 +1,7 @@
 // books.js
 
+import fetchData from '../../services/booksService';
+
 const initialState = [
   {
     id: 'bd6e1af5-692f-49a5-b609-cd2baa74acbc',
@@ -30,6 +32,7 @@ const initialState = [
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const FETCH_BOOK = 'bookstore/books/FETCH_BOOK';
 
 // Reducer
 export const booksReducer = (state = initialState, action) => {
@@ -60,3 +63,12 @@ export const removeBook = (id) => ({
   type: REMOVE_BOOK,
   payload: id,
 });
+
+export const fetchBooks = () => async (dispatch) => {
+  const books = await fetchData();
+  console.log('booookss', books);
+  dispatch({
+    type: FETCH_BOOK,
+    payload: books,
+  });
+};
