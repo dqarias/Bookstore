@@ -8,19 +8,19 @@ const initialState = [
     genre: 'Self-Help',
   },
   {
-    id: 2,
+    id: '2',
     title: 'Get out your own way',
     author: 'Mark Goulston',
     genre: 'Self-Help',
   },
   {
-    id: 3,
+    id: '3',
     title: 'Life of Pi',
     author: 'Yann Martel',
     genre: 'Adventure',
   },
   {
-    id: 4,
+    id: '4',
     title: 'Bob the cat',
     author: 'Yann Martel',
     genre: 'Adventure',
