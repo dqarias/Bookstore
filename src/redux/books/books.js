@@ -1,6 +1,6 @@
 // books.js
 
-import fetchData from '../../services/booksService';
+import { fetchData, addData } from '../../services/booksService';
 
 const initialState = [];
 
@@ -32,10 +32,19 @@ export const booksReducer = (state = initialState, action) => {
 
 // Action Creators
 
-export const addBook = (newBook) => ({
+/* export const addBook = (newBook) => ({
+
   type: ADD_BOOK,
   payload: newBook,
-});
+}); */
+
+export const addBook = (newBook) => async (dispatch) => {
+  await addData(newBook);
+  dispatch({
+    type: ADD_BOOK,
+    payload: newBook,
+  });
+};
 
 export const removeBook = (id) => ({
   type: REMOVE_BOOK,
