@@ -1,39 +1,20 @@
 // books.js
 
-const initialState = [
-  {
-    id: 'bd6e1af5-692f-49a5-b609-cd2baa74acbc',
-    title: 'The power of self discipline',
-    author: 'Peter Hollins',
-    genre: 'Self-Help',
-  },
-  {
-    id: 2,
-    title: 'Get out your own way',
-    author: 'Mark Goulston',
-    genre: 'Self-Help',
-  },
-  {
-    id: 3,
-    title: 'Life of Pi',
-    author: 'Yann Martel',
-    genre: 'Adventure',
-  },
-  {
-    id: 4,
-    title: 'Bob the cat',
-    author: 'Yann Martel',
-    genre: 'Adventure',
-  },
-];
+import { fetchData, addData, removeData } from '../../services/booksService';
+
+const initialState = [];
 
 // Actions
 const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
+const FETCH_BOOK = 'bookstore/books/FETCH_BOOK';
 
 // Reducer
 export const booksReducer = (state = initialState, action) => {
   switch (action.type) {
+    case FETCH_BOOK: {
+      return action.payload;
+    }
     case ADD_BOOK: {
       return [
         ...state,
@@ -42,21 +23,36 @@ export const booksReducer = (state = initialState, action) => {
     }
 
     case REMOVE_BOOK: {
-      const newArrayBook = state.filter((book) => book.id !== action.payload);
+      const newArrayBook = state.filter((book) => book.item_id !== action.payload);
       return newArrayBook;
     }
+
     default: return state;
   }
 };
 
-// Action Creators
+// Action creators
 
-export const addBook = (newBook) => ({
-  type: ADD_BOOK,
-  payload: newBook,
-});
+export const addBook = (newBook) => async (dispatch) => {
+  await addData(newBook);
+  dispatch({
+    type: ADD_BOOK,
+    payload: newBook,
+  });
+};
 
-export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  payload: id,
-});
+export const removeBook = (id) => async (dispatch) => {
+  await removeData(id);
+  dispatch({
+    type: REMOVE_BOOK,
+    payload: id,
+  });
+};
+
+export const fetchBooks = () => async (dispatch) => {
+  const books = await fetchData();
+  dispatch({
+    type: FETCH_BOOK,
+    payload: books,
+  });
+};

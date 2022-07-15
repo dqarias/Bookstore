@@ -6,11 +6,11 @@ const BookList = ({ books }) => (
   <div>
     {books.map((book) => (
       <Book
-        key={book.id}
-        id={book.id}
+        key={book.item_id}
+        id={book.item_id}
         title={book.title}
         author={book.author}
-        genre={book.genre}
+        category={book.category}
       />
     ))}
   </div>
