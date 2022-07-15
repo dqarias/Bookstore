@@ -1,6 +1,6 @@
 // books.js
 
-import { fetchData, addData } from '../../services/booksService';
+import { fetchData, addData, removeData } from '../../services/booksService';
 
 const initialState = [];
 
@@ -23,9 +23,10 @@ export const booksReducer = (state = initialState, action) => {
     }
 
     case REMOVE_BOOK: {
-      const newArrayBook = state.filter((book) => book.id !== action.payload);
+      const newArrayBook = state.filter((book) => book.item_id !== action.payload);
       return newArrayBook;
     }
+
     default: return state;
   }
 };
@@ -46,14 +47,21 @@ export const addBook = (newBook) => async (dispatch) => {
   });
 };
 
-export const removeBook = (id) => ({
+/* export const removeBook = (id) => ({
   type: REMOVE_BOOK,
   payload: id,
-});
+}); */
+
+export const removeBook = (id) => async (dispatch) => {
+  await removeData(id);
+  dispatch({
+    type: REMOVE_BOOK,
+    payload: id,
+  });
+};
 
 export const fetchBooks = () => async (dispatch) => {
   const books = await fetchData();
-  console.log('booookss', books);
   dispatch({
     type: FETCH_BOOK,
     payload: books,

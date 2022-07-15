@@ -19,4 +19,8 @@ const addData = async (book) => {
   await axios.post(`${URL_BACKEND}/${API_ID}/books`, book);
 };
 
-export { fetchData, addData };
+const removeData = async (id) => {
+  await axios.delete(`${URL_BACKEND}/${API_ID}/books/${id}`);
+};
+
+export { fetchData, addData, removeData };
