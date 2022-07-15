@@ -31,13 +31,7 @@ export const booksReducer = (state = initialState, action) => {
   }
 };
 
-// Action Creators
-
-/* export const addBook = (newBook) => ({
-
-  type: ADD_BOOK,
-  payload: newBook,
-}); */
+// Action creators
 
 export const addBook = (newBook) => async (dispatch) => {
   await addData(newBook);
@@ -46,11 +40,6 @@ export const addBook = (newBook) => async (dispatch) => {
     payload: newBook,
   });
 };
-
-/* export const removeBook = (id) => ({
-  type: REMOVE_BOOK,
-  payload: id,
-}); */
 
 export const removeBook = (id) => async (dispatch) => {
   await removeData(id);
