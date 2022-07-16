@@ -11,13 +11,13 @@ const Categories = () => {
   };
 
   return (
-    <div>
+    <div className="category">
+      <div>
+        <button className="button primary" onClick={() => handleClickCheck()} type="button">Check Status</button>
+      </div>
       <p>
         {dataCategory}
       </p>
-      <div>
-        <button onClick={() => handleClickCheck()} type="button">Check Status</button>
-      </div>
     </div>
 
   );

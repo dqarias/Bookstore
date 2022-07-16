@@ -1,0 +1,130 @@
+.book {
+margin: 1% 10%;
+padding: 1rem 2rem;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border: solid 1px #e8e8e8;
+border-radius: 4px;
+background-color: var(--color-white);
+}
+
+.booklist-line{
+    margin: 2% 10%;
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  
+}
+
+.book__information-category{
+    color: var(--color-gray);
+    font-size: 1rem;
+    font-weight: bold;
+    opacity: 0.5;
+}
+
+.book__information-title{
+    color: var(--color-gray);
+    font-size: 1.6rem;
+    font-family: var(--font-subtitles);
+    font-weight: bold;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    text-transform: capitalize;
+}
+
+.book__information-author{
+    font-family: var(--font-subtitles);
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: normal;
+    text-transform: capitalize;
+    color: var(--color-blue-two);
+}
+
+.book_information-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.book_information-buttons > span {
+    color: #e8e8e8;
+}
+
+.book__stats{
+    display: flex;
+    gap: 5.2rem;
+    padding-right: 15%;
+}
+
+.book__percentage{
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+}
+
+.book__percentage-circular{
+    display: flex;
+    align-items: center;
+}
+
+.book__percentage-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.book__percentage::after{
+    display: block;
+    clear: both;
+    content: "";
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 0.2rem;
+    height: 4.5rem;
+    width: 50%;
+    border-right: 0.2rem solid #e8e8e8;
+    padding: 0rem 2rem;
+}
+
+.book__percentage-number{
+    font-size: 2.2rem;
+    color: var(--color-gray);
+    font-weight: normal;
+}
+
+.book__percentage-state{
+    font-size: 1rem;
+    font-weight: normal;
+    opacity: 0.5;
+}
+
+.book__status{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.book__status-current{
+    font-family: var(--font-subtitles);
+    font-size: 1rem;
+    font-weight: 300;
+    opacity: 0.5;
+    text-transform: uppercase;
+    color: var(--color-gray);
+    
+}
+
+.book__status-chapter{
+    font-family: var(--font-subtitles);
+    font-size: 1.3rem;
+    font-weight: 300;
+    color: var(--color-gray);
+    margin-bottom: 1.6rem;
+}
