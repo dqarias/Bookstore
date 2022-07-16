@@ -2,15 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 body {
-/* colors variables */
+  /* colors variables */
   --color-primary-black: #272a31;
-  --color-blue-two: #4386bf;;
+  --color-blue-two: #4386bf;
   --color-blue-three: #0290ff;
   --color-transparent-orange: #ec5342d3;
   --color-gray: #121212;
   --color-white: #fff;
   --color-white-three: #fafafa;
-/* fonts variables */
+
+  /* fonts variables */
   --font-titles: "Montserrat", sans-serif;
-  --font-subtitles: "Roboto Slab", sans-serif; 
+  --font-subtitles: "Roboto Slab", sans-serif;
 }
