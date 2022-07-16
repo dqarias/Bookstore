@@ -32,7 +32,7 @@ const Book = ({
       </div>
       <div className="book__stats">
         <div className="book__percentage">
-          <div className="book__percentage-circular" style={{ width: 100, height: 100 }}>
+          <div className="book__percentage-circular">
             <CircularProgressbar
               value={randomPercentage}
               styles={buildStyles({
