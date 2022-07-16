@@ -1,0 +1,45 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3% 5%;
+  background-color: var(--color-white);
+  text-transform: uppercase;
+  color: var(--color-gray);
+  font-size: 1rem;
+}
+
+.navbar__navigation {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.navbar__logo {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0290ff;
+}
+
+.navbar__container {
+  display: flex;
+  gap: 4rem;
+}
+
+.navbar__profile {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .navbar {
+    padding: 1rem 10%;
+  }
+
+  .navbar__logo {
+    font-size: 2rem;
+  }
+
+  .navbar__profile {
+    display: block;
+  }
+}

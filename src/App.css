@@ -1,5 +1,8 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+@import url('./styles/reset.css');
+@import url('./styles/variables.css');
+@import url('./styles/base.css');
+@import url('./styles/book.css');
+@import url('./styles/button.css');
+@import url('./styles/inputBook.css');
+@import url('./styles/navbar.css');
+@import url('./styles/category.css');

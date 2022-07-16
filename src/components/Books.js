@@ -15,8 +15,7 @@ const Books = () => {
   return (
     <div>
       <BookList books={bookState} />
-      <br />
-      <br />
+      <hr className="booklist-line" />
       <InputBook />
     </div>
   );

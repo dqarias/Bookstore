@@ -1,0 +1,32 @@
+.button {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.info-primary {
+  border: none;
+  outline: none;
+  font-family: var(--font-subtitles);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: normal;
+  color: var(--color-blue-two);
+}
+
+.primary {
+  color: var(--color-white);
+  background-color: var(--color-blue-three);
+  border: none;
+  border-radius: 3px;
+  font-family: var(--font-subtitles);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  padding: 0.2rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .primary {
+    padding: 0.2rem 1.6rem;
+  }
+}

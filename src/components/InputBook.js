@@ -38,30 +38,57 @@ const InputBook = () => {
   };
 
   return (
-    <form>
-      <input
-        type="text"
-        placeholder="Book title"
-        value={bookArray.title}
-        name="title"
-        onChange={(e) => handleInputChange(e)}
-      />
-      <input
-        type="text"
-        placeholder="Book author"
-        value={bookArray.author}
-        name="author"
-        onChange={(e) => handleInputChange(e)}
-      />
-      <input
-        type="text"
-        placeholder="Book category"
-        value={bookArray.category}
-        name="category"
-        onChange={(e) => handleInputChange(e)}
-      />
-      <button onClick={handleSubmit} type="button">ADD BOOK</button>
-    </form>
+    <div className="inputBook">
+      <h3 className="inputBook__title">
+        ADD NEW BOOK
+      </h3>
+      <form className="inputBook__form">
+        <input
+          type="text"
+          placeholder="Book title"
+          value={bookArray.title}
+          name="title"
+          onChange={(e) => handleInputChange(e)}
+          className="inputBook__form-input"
+        />
+        <input
+          type="text"
+          placeholder="Book author"
+          value={bookArray.author}
+          name="author"
+          onChange={(e) => handleInputChange(e)}
+          className="inputBook__form-input"
+        />
+        {/* <input
+          type="text"
+          placeholder="Book category"
+          value={bookArray.category}
+          name="category"
+          onChange={(e) => handleInputChange(e)}
+        /> */}
+        <select
+          className="inputBook__form-select"
+          value={bookArray.category}
+          name="category"
+          onChange={(e) => handleInputChange(e)}
+        >
+          <option
+            className="inputBook__form-option"
+            value=""
+          >
+            Select Category
+          </option>
+          <option value="Novel">Novel</option>
+          <option value="Action">Action</option>
+          <option value="Fiction">Fiction</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Self Help">Self Help</option>
+        </select>
+
+        <button className="button primary" onClick={handleSubmit} type="button">ADD BOOK</button>
+      </form>
+    </div>
+
   );
 };
 
